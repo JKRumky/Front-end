@@ -1,0 +1,39 @@
+/*navigation menu*/
+*{box-sizing: border-box;}
+header{ background-color: #00aeef;}
+ul li{list-style: none;}
+nav a{color: white; text-decoration: solid;}
+.navbar{min-height: 10px; display: flex; justify-content: space-between; align-items: center;}
+.nav-menu{display: flex; justify-content: space-between; align-items: center; gap: 5px;}
+.nav-link{transition: 0.5s ease;}
+.nav-branding:hover{color: whitesmoke;}
+.nav-link:hover{color: whitesmoke;}
+.hamburger{display: none; cursor: pointer;}
+.bar{display: block; width: 25px; height: 2px; margin: 5px auto; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; background-color: white;}
+@media(max-width:650px){
+    .hamburger{display: block;}
+    .hamburger.active .bar:nth-child(2){opacity: 0;}
+    .hamburger.active .bar:nth-child(1){transform: translateY(7px) rotate(45deg);}
+    .hamburger.active .bar:nth-child(3){transform: translateY(-7px) rotate(-45deg);}
+    .nav-menu{ position: fixed; left: -100%; top: 25px; gap: 0; flex-direction: row; width: 100%; text-align: center; transition: 0.3s; z-index: 1;}
+    .nav-item{margin: 3px 0;}
+    .nav-menu.active{left: 0;}}
+
+/*Dropdown Button */  
+.dropbtn {border: none;}
+.dropdown {position: relative; z-index: 1;}
+.dropdown-content {display: none; position: absolute; background-color: white; border-radius: 3px;}
+.dropdown-content a {text-decoration: none; display: block;}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+  
+/*Slide-show*/
+.slideshow-container {max-width: 1000px; position: relative; margin: auto;}
+.prev, .next {cursor: pointer; position: absolute; top: 45%; width: auto; margin-top: -22px; padding: 5px; font-size: 18px; transition: 0.6s ease; border-radius: 50%; user-select: none;}
+.prev {left: 0; border-radius: 15px 15px 15px 15px;}
+.next {right: 0; border-radius: 15px 15px 15px 15px;}
+.prev:hover, .next:hover {background-color: rgba(102, 87, 87, 0.8);}
+.dot {cursor: pointer; height: 10px; width: 10px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;}
+.active, .dot:hover {background-color: #717171;}
+.fade {animation-name: fade; animation-duration: 1.5s;}
+@keyframes fade {from {opacity: .4} to {opacity: 1}}
