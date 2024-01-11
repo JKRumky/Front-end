@@ -13,7 +13,6 @@ function toggleMobileMenu(menu) {
   menu.classList.toggle('open');
 }
 
-
 //slider
 let slideIndex = 1;
 showSlides(slideIndex);
